@@ -1,33 +1,48 @@
 package com.gmarques.restapi.controller;
 
 import com.gmarques.restapi.model.CloudVendor;
+import com.gmarques.restapi.service.CloudVendorService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/cloudvendor")
 public class CloudAPIService {
-    CloudVendor cloundVendor;
+
+    CloudVendorService cloudVendorService;
+
+    public CloudAPIService(CloudVendorService cloudVendorService) {
+        this.cloudVendorService = cloudVendorService;
+    }
+
+// read 1 cloud vendor
     @GetMapping("{vendorId}")
-    public CloudVendor getCloudVendor(String vendorId) {
-        return cloundVendor;
-//                new CloudVendor("C1", "AWS", "Seattle, WA", "1-800-555-1212");
+    public CloudVendor getCloudVendorDetails(@PathVariable("vendorId") String vendorId) {
+        return cloudVendorService.getCloudVendor(vendorId);
+    }
+
+// read all cloud vendors
+    @GetMapping()
+    public List<CloudVendor> getAllCloudVendorDetails() {
+        return cloudVendorService.getAllCloudVendors();
     }
 
     @PostMapping
     public String createCloudVendorDetails (@RequestBody CloudVendor cloudVendor) {
-        this.cloundVendor = cloudVendor;
+        cloudVendorService.createCloudVendor(cloudVendor);
         return "Cloud Vendor Details Created Successfully";
     }
 
     @PutMapping
     public String updateCloudVendorDetails (@RequestBody CloudVendor cloudVendor) {
-        this.cloundVendor = cloudVendor;
+        cloudVendorService.updateCloudVendor(cloudVendor);
         return "Cloud Vendor Details Updated Successfully";
     }
 
     @DeleteMapping("{vendorId}")
-    public String deleteCloudVendorDetails (String vendorId) {
-        this.cloundVendor = null;
+    public String deleteCloudVendorDetails (@PathVariable("vendorId") String vendorId) {
+        cloudVendorService.deleteCloudVendor(vendorId);
         return "Cloud Vendor Details Deleted Successfully";
     }
 }

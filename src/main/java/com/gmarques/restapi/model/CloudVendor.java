@@ -5,10 +5,9 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "tb_cloudVendor")
+@Table(name = "tb_cloudvendor")
 public class CloudVendor {
     @Id
-    @GeneratedValue
     private String vendorId;
     private String vendorName;
     private String vendorAddress;

@@ -1,4 +1,13 @@
 package com.gmarques.restapi.service;
 
-public class CloudVendorService {
+import com.gmarques.restapi.model.CloudVendor;
+
+import java.util.List;
+
+public interface CloudVendorService {
+    public String createCloudVendor(CloudVendor cloudVendor);
+    public String updateCloudVendor(CloudVendor cloudVendor);
+    public String deleteCloudVendor(String cloudVendorId);
+    public CloudVendor getCloudVendor(String cloudVendorId);
+    public List<CloudVendor> getAllCloudVendors();
 }
