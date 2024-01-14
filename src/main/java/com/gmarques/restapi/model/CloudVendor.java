@@ -1,8 +1,14 @@
 package com.gmarques.restapi.model;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_cloudVendor")
 public class CloudVendor {
+    @Id
+    @GeneratedValue
     private String vendorId;
     private String vendorName;
     private String vendorAddress;

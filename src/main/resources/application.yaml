@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/cloud_vendor
+    username: gmarques
+    password: password
+
+# JPA settings
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database: postgresql
+
