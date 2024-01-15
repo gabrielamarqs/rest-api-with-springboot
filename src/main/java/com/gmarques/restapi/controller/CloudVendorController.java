@@ -8,11 +8,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cloudvendor")
-public class CloudAPIService {
+public class CloudVendorController {
 
     CloudVendorService cloudVendorService;
 
-    public CloudAPIService(CloudVendorService cloudVendorService) {
+    public CloudVendorController(CloudVendorService cloudVendorService) {
         this.cloudVendorService = cloudVendorService;
     }
 
