@@ -1,6 +1,6 @@
 package com.gmarques.restapi.service.impl;
 
-import com.gmarques.restapi.model.User;
+import com.gmarques.restapi.entity.User;
 import com.gmarques.restapi.repository.UserRepository;
 import com.gmarques.restapi.service.UserService;
 import org.springframework.stereotype.Service;

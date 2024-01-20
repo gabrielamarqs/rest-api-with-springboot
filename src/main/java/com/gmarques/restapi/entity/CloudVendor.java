@@ -1,4 +1,4 @@
-package com.gmarques.restapi.model;
+package com.gmarques.restapi.entity;
 
 import jakarta.persistence.*;
 

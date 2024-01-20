@@ -1,6 +1,6 @@
 package com.gmarques.restapi.controller;
 
-import com.gmarques.restapi.model.CloudVendor;
+import com.gmarques.restapi.entity.CloudVendor;
 import com.gmarques.restapi.service.CloudVendorService;
 import org.springframework.web.bind.annotation.*;
 

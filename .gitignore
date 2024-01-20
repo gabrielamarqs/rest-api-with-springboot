@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+.gitignore
+!src/main/java/com/gmarques/restapi/service/impl/UserServiceImplementation.java
+

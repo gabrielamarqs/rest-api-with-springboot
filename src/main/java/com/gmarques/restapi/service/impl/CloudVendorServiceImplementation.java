@@ -1,6 +1,6 @@
 package com.gmarques.restapi.service.impl;
 
-import com.gmarques.restapi.model.CloudVendor;
+import com.gmarques.restapi.entity.CloudVendor;
 import com.gmarques.restapi.repository.CloudVendorRepository;
 import com.gmarques.restapi.service.CloudVendorService;
 import org.springframework.stereotype.Service;

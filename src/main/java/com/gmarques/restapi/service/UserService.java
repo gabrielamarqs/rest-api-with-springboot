@@ -1,6 +1,6 @@
 package com.gmarques.restapi.service;
 
-import com.gmarques.restapi.model.User;
+import com.gmarques.restapi.entity.User;
 
 import java.util.List;
 

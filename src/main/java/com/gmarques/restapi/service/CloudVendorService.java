@@ -1,6 +1,6 @@
 package com.gmarques.restapi.service;
 
-import com.gmarques.restapi.model.CloudVendor;
+import com.gmarques.restapi.entity.CloudVendor;
 
 import java.util.List;
 
